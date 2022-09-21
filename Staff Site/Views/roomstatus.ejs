@@ -1,0 +1,16 @@
+
+
+<table id="response">
+    <tr>
+      <th>Room Number</th><th>Room Status</th><th>Notes</th>
+    </tr>
+    <% for (x in data) {  %>
+      <% let u = data[x]; %>
+      <tr>
+        <td><%= `${u.r_no}` %></td>
+        <td><%= `${u.r_status}` %></td>
+        <td><%= `${u.r_notes}` %></td>
+      </tr>    
+    <% } %>
+  </table>
+  </div>

@@ -1,0 +1,22 @@
+<table>
+	<tr>
+	  <th>Name</th><th>Email</th><th>Address</th>
+	  <th>Card Type</th><th>Expiry</th><th>Card No.</th><th>Booking Ref</th>
+	  <th>Total</th><th>Outstanding</th><th>Notes</th>
+	</tr>
+	<% for (x in data) {  %>
+	  <% let u = data[x]; %>
+	  <tr>
+		<td><%= u.c_name %></td>
+		<td><%= u.c_email %></td>
+		<td><%= u.c_address %></td>
+		<td><%= u.c_cardtype %></td>
+		<td><%= u.c_cardexp %></td>
+		<td><%= u.cardno %></td>
+		<td><%= u.b_ref %></td>
+		<td><%= u.b_cost %></td>
+		<td><%= u.b_outstanding %></td>
+		<td><%= u.b_notes %></td>
+	  </tr>    
+	<% } %>
+  </table>

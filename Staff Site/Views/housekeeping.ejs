@@ -1,0 +1,51 @@
+<%- include('head') %>
+
+<body>
+<header>
+	<h1> <%= indexTitle %> </h1>
+</header>
+
+<%- include('nav') %>
+	
+	
+	<div class="formsection">
+	<h2>Housekeeping</h2>
+		<form action="/" method="post" onsubmit="return validateForm();"> 
+		<fieldset>
+		<legend>Housekeeping</legend>
+		<p>Please enter a name for the room: </p>
+		<label for="housekeeper_id"> Staff Number: </label>
+		<input type="text" name ="housekeeper_id"  id="housekeeper_id" accesskey="F" placeholder="Housekeeper ID">
+			<br><br/>
+		<label for="booking_id"> Booking ID: </label>
+		<input type="text" name ="booking_id"  id="booking_id" accesskey="F" placeholder="booking_id">
+			<br><br/>
+		<label for="first_name"> Guest First Name: </label>
+		<input type="text" name ="first_name"  id="first_name" accesskey="F" placeholder="First name">
+			<br><br/>
+		<label for="last_name"> Guest Last Name: </label>
+		<input type="text" name ="last_name"  id="last_name" accesskey="L" placeholder="Last Name" >
+			<br><br/>
+		<label for="room_no"> Room Number: </label>
+		<input type="number" name ="room_no"  id="room_no" accesskey="F" placeholder="Room Number">
+			<br><br/>
+		<label for="room_status">
+			<span>Update Room Status:</span>
+		</label>
+		<select id="room_status" name="room_status">
+			<option value="In_Use">Checked In / Not Available</option>
+			<option value="Free">Checked Out / Available</option>
+		</select>
+			<br><br/>
+		<label for="comments"> Comments: </label> <br>
+		<textarea name ="comment"  id="comment" rows="5" cols="35" > </textarea>
+	
+		</p>
+	
+		<button type="submit" name="submit" id="submit" alt="submit" value="Submit"> Send Now </button>
+	</fieldset>
+		</form>
+	</div>
+	</main>
+
+<%- include('footer') %>

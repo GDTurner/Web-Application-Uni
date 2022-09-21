@@ -1,0 +1,60 @@
+<%- include('headpayment') %>
+
+<body>
+
+<header>
+	<h1> <%= indexTitle %> </h1>
+</header>
+
+<%- include('nav') %>
+
+	
+	<img src="images/paymenthero.jpeg" alt="landinghero" id="statusImg" style="width:100%">
+	
+	<main>
+
+		<p>Please fill in all the information: </p>
+  
+		
+
+
+		<form action="/retrieve:fname" method="GET">
+  
+
+
+			  <label for="name"> Customer Name</label>
+			  <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+			  <input type="submit" id="retrieve" value="Retrieve Details" class="btn">
+			
+			</form>
+			<form action="/" method="">
+			  <h3>Add Surcharge</h3>
+			  <label for="bref">Booking ref.</label>
+			  <input type="number" id="refSur" name="refSur" placeholder=" ">
+			  <label for="amount">Amount</label>
+			  <input type="number" id="amountAdd" name="amountAdd" placeholder="00.00">
+			  <input type="submit" id="update" value="Update Balance" class="btn">
+			  
+			  <h3>Take Payment</h3>
+			 
+			  <label for="bref">Booking ref.</label>
+			  <input type="number" id="refPay" name="bref" placeholder=" ">
+			  <label for="card_type"> Card Type: </label>
+			  <select id="card_type" name="card_type">
+				<option value="V">Visa</option>
+				<option value="MC">Mastercard</option>
+				<option value="A">American Express</option>
+					  </select>
+			  <label for="ccnum">Card number</label>
+			  <input type="text" id="ccnum" name="cardnumber" placeholder="1111222233334444">
+			  <label for="expdate">Expiry date</label>
+			  <input type="text" id="expdate" name="expmonth" placeholder="11/24">
+			  <label for="amount">Amount</label>
+			  <input type="number" id="amountPay" name="amountPay" placeholder="00.00">
+
+		  <input type="submit" id="pay" value="Take Payment" class="btn">
+		</form>
+		<%- include('getcustomer') %>
+	</main>
+
+<%- include('footer') %>

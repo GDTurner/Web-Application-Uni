@@ -1,0 +1,92 @@
+<%- include('head') %>
+
+<body>
+
+<header>
+	<h1> <%= indexTitle %> </h1>
+</header>
+
+<%- include('nav') %>
+	
+
+	
+
+	
+	<img src="images/receptionhero.jpeg" alt="landinghero" id="statusImg" style="width:100%; height:300px;">
+	
+	
+	<main>
+	
+	<div class="statusform">
+
+		<form action="/" method=""> 
+	
+		<fieldset>
+		<legend>Reception</legend>
+
+		<p>Please update the check-in/check-out and room status </p>
+
+		<label for="room_no"> Room Number: </label>
+		<select id="room_no" name="room_no">
+			<option value="101">101</option>
+			<option value="102">102</option>
+			<option value="103">103</option>
+			<option value="104">104</option>
+			<option value="105">105</option>
+			<option value="106">106</option>
+			<option value="107">107</option>
+			<option value="108">108</option>
+			<option value="201">201</option>
+			<option value="202">202</option>
+			<option value="203">203</option>
+			<option value="204">204</option>
+			<option value="205">205</option>
+			<option value="206">206</option>
+			<option value="207">207</option>
+			<option value="208">208</option>
+			<option value="209">209</option>
+			<option value="210">210</option>
+			<option value="211">211</option>
+			<option value="212">212</option>
+			<option value="301">301</option>
+			<option value="302">302</option>
+			<option value="303">303</option>
+			<option value="304">304</option>
+			<option value="305">305</option>
+			<option value="306">306</option>
+			<option value="307">307</option>
+			<option value="308">308</option>
+			<option value="309">309</option>
+			<option value="310">310</option>
+			<option value="311">311</option>
+			<option value="312">312</option>
+		</select>
+		
+		<label for="room_status">
+			<span>Update Room Status:</span>
+		</label>
+		<select id="room_status" name="room_status">
+			<option value="X">Check In</option>
+			<option value="C">Check Out</option>
+			<option value="A">Available</option>
+		</select>
+			<br><br/>
+		<label for="comments"> Comments: </label> <br>
+		<textarea name ="comment"  id="comment" > </textarea>
+	
+		</p>
+	 
+		<button type="submit" name="status" id="status" alt="status" value="status"> Update Room Status </button>
+	
+	
+		</fieldset>
+		</form>
+		</div>
+<div class="container">
+		<%- include('roomstatus') %>
+
+	</main>
+
+
+
+<%- include('footer') %>
