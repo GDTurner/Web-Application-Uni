@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> <%= title %> </title>
+ <link rel="stylesheet" href="/CSS/styles.css">
+ <script src="JS/interaction.js" defer ></script> 
+ <script>
+	function validateForm(){
+	   if (document.forms[0].email.value == ''){
+		   alert('Please enter an email address.');
+			   return false;
+		} // end if
+	   return true;
+	} // end function validateForm
+   </script>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>

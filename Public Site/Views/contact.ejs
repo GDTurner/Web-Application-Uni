@@ -1,0 +1,44 @@
+<%- include('head') %>
+
+<%- include('nav') %>
+	
+<img src="images/contacthero.jfif" alt="landinghero" style="width:100%">
+
+	<h2>Contact Us</h2>
+    <h4>	Please contact if you have any queries about the hotel.
+	<br><br> 
+	Telephone: 01245 392695 
+	<br><br>
+	Email: lakesidehotel@gmail.com
+	<br><br>
+	Watton Road, Norfolk, NR5 8LZ
+	<br><br>	
+	We are located on the Western edge of Norwich, close to the Hospital and Research Park.</h4>
+	<br><br>	
+	</div>
+
+	<div class="formsection">
+		<h2>Contact Us</h2>
+	<p>Please fill in all the information: </p>
+		<form action="/" method="post" onsubmit="return validateForm();"> 
+		<fieldset>
+			<legend>Contact</legend>
+		<label for="first_name"> First Name: </label>
+		<input type="text" name ="first_name"  id="first_name" accesskey="F" placeholder="First name">
+			<br><br/>
+		<label for="last_name"> Last Name: </label>
+		<input type="text" name ="last_name"  id="last_name" accesskey="L" placeholder="Last Name" >
+			<br><br/>
+		<label for="email"> E-mail: </label>
+		<input type="email" name ="email"  id="email" placeholder="email" accesskey="E" >
+		<br><br/>
+		<label for="comments"> Comments: </label> <br>
+		<textarea name ="comment"  id="comment" rows="5" cols="35" > </textarea>
+		<br><br/>
+		<button type="submit" name="submit" id="submit" alt="submit" value="Submit"> Send Now </button>
+		</fieldset>
+		</form>
+	</div>
+	
+
+<%- include('footer') %>

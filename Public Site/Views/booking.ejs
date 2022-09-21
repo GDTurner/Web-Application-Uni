@@ -1,0 +1,84 @@
+<%- include('headbooking') %>
+
+<%- include('nav') %>
+
+<img src="images/receptionhero.jpeg" alt="landinghero" id="statusImg" style="width:100%">
+
+<div id="bookingpage">
+<div class="formsection">
+<p>Please fill in all the information: </p>
+
+<form action="" method="" onsubmit=""> 
+<fieldset>
+  <legend>Booking</legend>
+
+   <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form -->
+   <p>
+         <label for="roomtype">
+           <span>Room Type:</span>
+         </label>
+         <select id="roomtype" name="rooms">
+           <option value="std_t">Standard Twin</option>
+           <option value="sup_t">Superior Twin</option>
+           <option value="std_d">Standard Double</option>
+           <option value="sup_d">Superior Double</option>
+         </select>
+   </p>
+
+   <p>
+       <label for="roomnumber">
+         <span>Number of rooms needed:</span>
+       </label>
+       <select id="numrooms" name="numrooms">
+         <option value="1">One</option>
+         <option value="2">Two</option>
+         <option value="3">Three</option>
+         <option value="4">Four</option>
+       </select>
+ </p>
+
+   <p>
+
+       <label for="start">Checkin Date:</label>
+
+       <input type="date" id="checkin" name="checkin"
+              value="" min="15/01/2022" max="">
+
+       <label for="start">Checkout Date:</label>
+
+       <input type="date" id="checkout" name="checkout"
+               value=""
+               min="" max="">
+
+
+         
+              
+<br>
+<br>
+ 
+   <button type="submit" name="book" id="book" alt="check booking" value="book"> Check Availability </button>
+   <div id="payment"><%- include('customerdetails') %></div>
+  </fieldset>
+   </form>
+</div>
+
+<div id="altwrap">
+  <br>
+  <br>
+  <div class = "section">
+    <div id="std_t"><%- include('std_t') %></div>
+    <div id="std_d"><%- include('std_d') %></div>
+    <div id="sup_t"><%- include('sup_t') %></div>
+    <div id="sup_d"><%- include('sup_d') %></div>
+  </div>
+</div>
+
+</div>
+<div id="confirm">
+  <div id = "section">
+  <%- include('confirmed') %>
+</div>
+</div>
+
+
+<%- include('footer') %>
